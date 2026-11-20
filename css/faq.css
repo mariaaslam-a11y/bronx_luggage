@@ -1,0 +1,47 @@
+/* =========================================================
+   Bronx Luggage — FAQ page
+   ========================================================= */
+
+.faq-search { position: relative; max-width: 560px; margin: 32px auto 0; }
+.faq-search i { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 1.05rem; pointer-events: none; }
+.faq-search .form-control { border-radius: 999px; padding: 16px 22px 16px 52px; font-size: 1rem; border-color: var(--line); background: var(--bg-soft); }
+.faq-search .form-control:focus { background: #fff; border-color: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft); }
+
+.faq-layout { max-width: 860px; margin: 0 auto; }
+
+.faq-accordion { --bs-accordion-border-width: 0; --bs-accordion-bg: transparent; }
+.faq-item { border-bottom: 1px solid var(--line) !important; background: transparent; }
+.faq-item .accordion-button {
+  padding: 24px 4px;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  background: transparent;
+  box-shadow: none;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.faq-item .accordion-button:hover { color: var(--accent); }
+.faq-item .accordion-button:not(.collapsed) { color: var(--accent); }
+.faq-item .accordion-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.faq-item .accordion-button::after {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-soft);
+  background-position: center;
+  background-size: 14px;
+  transition: transform .4s var(--ease-out), background-color .3s var(--ease);
+}
+.faq-item .accordion-button:not(.collapsed)::after { background-color: var(--accent-soft); }
+
+.faq-cat { flex: none; padding: 3px 10px; border-radius: 999px; background: var(--bg-soft); font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.faq-item .accordion-body { padding: 0 4px 26px; color: var(--ink-2); font-size: 1rem; line-height: 1.7; max-width: 720px; }
+
+.faq-empty { text-align: center; color: var(--muted); padding: 40px 0; }
+.faq-empty a { color: var(--accent); font-weight: 600; }
+
+.faq-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(32px, 5vw, 56px); border-radius: var(--radius-lg); background: var(--dark); color: #fff; }
+.faq-cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -.03em; margin: 0 0 6px; }
+.faq-cta p { margin: 0; color: #a1a1a6; }

@@ -1,0 +1,116 @@
+/* =========================================================
+   Bronx Luggage — Shop page
+   ========================================================= */
+
+.shop-hero { padding: clamp(40px, 6vw, 72px) 0 clamp(20px, 3vw, 32px); }
+.shop-hero .display-title { margin-bottom: 10px; }
+
+/* ---------- category tabs ---------- */
+.cat-tabs-wrap {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 20;
+  background: rgba(255, 255, 255, .86);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+.cat-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 12px 0; scrollbar-width: none; }
+.cat-tabs::-webkit-scrollbar { display: none; }
+
+.cat-tab {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--bg-soft);
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: all .3s var(--ease);
+}
+.cat-tab:first-child { padding-left: 18px; }
+.cat-tab img { width: 30px; height: 30px; object-fit: contain; transition: transform .4s var(--ease-out); }
+.cat-tab span { font-size: .75rem; color: var(--muted); }
+.cat-tab:hover { color: var(--accent); border-color: var(--accent); background: #fff; }
+.cat-tab:hover img { transform: rotate(-8deg) scale(1.1); }
+.cat-tab.active { background: var(--ink); color: #fff; }
+.cat-tab.active span { color: rgba(255, 255, 255, .65); }
+
+/* ---------- filters sidebar ---------- */
+@media (min-width: 992px) {
+  .filters { position: sticky; top: calc(var(--header-h) + 90px); max-height: calc(100vh - var(--header-h) - var(--ticker-h) - 110px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; }
+  .filters .offcanvas-body { padding: 0; }
+}
+
+.filters .offcanvas-title { font-weight: 700; letter-spacing: -.02em; }
+
+.filter-block { padding: 0 0 22px; margin-bottom: 22px; border-bottom: 1px solid var(--line); }
+.filter-title { display: block; font-size: .74rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin: 0 0 12px; }
+.filter-hint { font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--accent); }
+
+.search-box { position: relative; }
+.search-box i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search-box .form-control { border-radius: 999px; padding: 10px 14px 10px 38px; border-color: var(--line); background: var(--bg-soft); font-size: .9rem; }
+.search-box .form-control:focus { background: #fff; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+
+.seg { display: flex; padding: 4px; border-radius: 999px; background: var(--bg-soft); }
+.seg label { flex: 1; text-align: center; padding: 7px 0; border-radius: 999px; font-size: .86rem; font-weight: 500; cursor: pointer; color: var(--ink-2); transition: all .3s var(--ease); }
+.seg label:hover { color: var(--accent); }
+.seg .btn-check:checked + label { background: #fff; color: var(--ink); box-shadow: var(--shadow-sm); }
+.seg .btn-check:focus-visible + label { outline: 2px solid var(--accent); }
+
+.check-list { display: flex; flex-direction: column; gap: 2px; }
+.check-item { display: flex; align-items: center; gap: 10px; padding: 6px 8px; margin: 0 -8px; border-radius: 10px; font-size: .92rem; cursor: pointer; transition: background-color .2s var(--ease); }
+.check-item:hover { background: var(--bg-soft); }
+.check-item .form-check-input { margin: 0; flex: none; cursor: pointer; }
+.check-item .form-check-input:checked { background-color: var(--ink); border-color: var(--ink); }
+.check-item .form-check-input:focus { box-shadow: 0 0 0 4px var(--accent-soft); border-color: var(--accent); }
+.check-item span { flex: 1; }
+.check-item small { color: var(--muted); font-size: .78rem; }
+
+.toggle-row { display: flex; gap: 8px; }
+.toggle { flex: 1; padding: 9px 0; border-radius: 12px; border: 1px solid var(--line); background: #fff; font-size: .86rem; font-weight: 500; transition: all .25s var(--ease); }
+.toggle:hover { border-color: var(--accent); color: var(--accent); }
+.toggle.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.swatch-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--sw);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .14);
+  position: relative;
+  transition: transform .25s var(--ease);
+}
+.swatch:hover { transform: scale(1.12); }
+.swatch.active { box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .14), 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+
+/* ---------- results ---------- */
+.results-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+.results-count { margin: 0; color: var(--muted); }
+.results-count strong { color: var(--ink); }
+.sort-label { font-size: .86rem; color: var(--muted); white-space: nowrap; }
+.btn-filter { padding: 8px 18px; }
+.filter-count:not(:empty) { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; border-radius: 10px; background: var(--accent); color: #fff; font-size: .72rem; }
+
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.active-filters.has-items { margin-bottom: 22px; }
+.af-pill { display: inline-flex; align-items: center; gap: 4px; padding: 5px 8px 5px 14px; border-radius: 999px; border: 0; background: var(--accent-soft); color: var(--accent-dark); font-size: .82rem; font-weight: 500; transition: background-color .25s var(--ease); }
+.af-pill:hover { background: #ead8c4; }
+.af-clear { border: 0; background: none; font-size: .82rem; font-weight: 600; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.af-clear:hover { color: var(--accent); }
+
+@media (min-width: 576px) {
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+}
+
+@media (max-width: 991.98px) {
+  .filters .offcanvas-body { padding-top: 0; }
+}

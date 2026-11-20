@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bronx Luggage — Luxury Luggage, Bags &amp; Backpacks</title>
+  <meta name="description" content="Bronx Luggage at the Festival Marketplace: luxury and everyday luggage, bags, backpacks and travel accessories from Gucci, Chanel, Louis Vuitton, Tommy Hilfiger and Prada.">
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Jost:wght@300;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+</head>
+<body data-page="home">
+  <div id="loader" class="loader"></div>
+  <header id="site-header" class="site-header"></header>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"><span></span></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO: CAMPAIGN CAROUSEL ============
+         Six slides (photos → videos → photos) that advance automatically every 1.5 seconds.
+         Photos: Pexels free licence (pexels.com), saved in images/hero/
+         Videos: Mixkit free licence (mixkit.co), saved in images/videos/ -->
+    <section class="hero" id="hero" aria-label="Bronx Luggage 2026 campaign">
+      <div id="heroCarousel" class="carousel slide carousel-fade hero-carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-caption="The Airport Edit">
+            <img class="hero-media" src="images/hero/hero-1-airport-edit.jpg" alt="Model with a black spinner suitcase and leather handbag outside an airport terminal" style="object-position: 62% 40%">
+          </div>
+          <div class="carousel-item" data-caption="Effortless Arrivals">
+            <img class="hero-media" src="images/hero/hero-2-effortless-arrivals.jpg" alt="Traveller in a camel coat with a white hardside suitcase in an airport corridor" style="object-position: 60% 35%">
+          </div>
+          <div class="carousel-item" data-caption="Street-Style Carry-On">
+            <video class="hero-media" muted loop playsinline preload="auto" poster="images/videos/hero-3-model-suitcase.jpg" aria-hidden="true">
+              <source src="images/videos/hero-3-model-suitcase.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item" data-caption="Built for the Terminal">
+            <video class="hero-media" muted loop playsinline preload="auto" poster="images/videos/hero-4-airport-luggage.jpg" aria-hidden="true">
+              <source src="images/videos/hero-4-airport-luggage.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-item" data-caption="The Statement Bag">
+            <img class="hero-media hero-media--right" src="images/hero/hero-5-statement-bag.jpg" alt="Street-style model holding a structured designer handbag" style="object-position: 50% 30%">
+          </div>
+          <div class="carousel-item" data-caption="Crafted for Him">
+            <img class="hero-media" src="images/hero/hero-6-menswear-leather.jpg" alt="Man in a tweed blazer carrying a brown leather backpack" style="object-position: 55% 30%">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-content container-xl">
+        <span class="eyebrow hero-eyebrow rise">New Season · 2026 Campaign</span>
+        <h1 class="hero-title">
+          <span class="line"><span class="rise d1">Built to travel.</span></span>
+          <span class="line"><span class="serif rise d2">Made to last.</span></span>
+        </h1>
+        <p class="hero-lead rise d3">Iconic luggage from the world’s finest houses — curated for every journey, at the Festival Marketplace.</p>
+        <div class="hero-cta rise d4">
+          <a href="shop.html?cat=luggage" class="btn btn-bl-light magnetic">Shop luggage</a>
+          <a href="brands.html" class="btn btn-ghost-light magnetic">Explore brands</a>
+        </div>
+      </div>
+
+      <div class="hero-bottom container-xl">
+        <div class="hero-caption" aria-live="polite">
+          <span class="hc-num" id="heroNum">01</span><span class="hc-total">/ 06</span>
+          <span class="hc-text" id="heroCaption">The Airport Edit</span>
+        </div>
+        <div class="hero-progress" id="heroProgress" role="tablist" aria-label="Choose scene">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Scene 1"><span></span></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Scene 2"><span></span></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Scene 3"><span></span></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Scene 4"><span></span></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Scene 5"><span></span></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Scene 6"><span></span></button>
+        </div>
+        <button type="button" class="hero-toggle" id="heroToggle" aria-label="Pause slideshow"><i class="bi bi-pause-fill"></i></button>
+      </div>
+
+      <a href="#showcase" class="hero-scroll" aria-label="Scroll to the signature spinner"><span></span></a>
+    </section>
+
+    <!-- ============ 2. BRAND MARQUEE ============ -->
+    <section class="brand-strip" aria-label="Brands we carry">
+      <div class="brand-marquee"><div class="brand-marquee-track" id="brandMarquee"></div></div>
+    </section>
+
+    <!-- ============ 3. PINNED PRODUCT SHOWCASE (scroll-driven) ============ -->
+    <section class="showcase" id="showcase" aria-label="The signature spinner">
+      <div class="showcase-sticky" id="showcaseSticky">
+        <div class="container-xl showcase-grid">
+
+          <div class="showcase-copy">
+            <div class="sc-step is-active" data-step="0">
+              <span class="eyebrow">The Signature Spinner</span>
+              <h2 class="sc-title">Meet the carry-on<br>that <span class="serif">moves like you.</span></h2>
+              <p class="sc-text">Silent 360° wheels, a featherweight shell and a handle that glides — engineered to disappear in your hand.</p>
+            </div>
+            <div class="sc-step" data-step="1">
+              <span class="eyebrow">Engineering</span>
+              <h2 class="sc-title">Every detail,<br><span class="serif">considered.</span></h2>
+              <p class="sc-text">Look closer. An aluminium telescopic handle, a scratch-resistant shell, a TSA-approved lock and four whisper-quiet spinner wheels.</p>
+            </div>
+            <div class="sc-step" data-step="2">
+              <span class="eyebrow">Built to last</span>
+              <h2 class="sc-title">Made for a lifetime.<br><span class="serif">Then another.</span></h2>
+              <div class="sc-facts">
+                <div><strong>5 yr</strong><span>Warranty</span></div>
+                <div><strong>Free</strong><span>In-store repairs</span></div>
+                <div><strong>30 day</strong><span>Returns</span></div>
+              </div>
+            </div>
+            <div class="sc-step" data-step="3">
+              <span class="eyebrow">Colour</span>
+              <h2 class="sc-title">Eight colours.<br><span class="serif">One icon.</span></h2>
+              <div class="sc-swatches" id="scSwatches" role="radiogroup" aria-label="Choose a colour"></div>
+              <p class="sc-shown" id="scShown"></p>
+              <button type="button" class="btn btn-bl magnetic" id="scView">View this piece <i class="bi bi-arrow-right"></i></button>
+            </div>
+
+            <div class="sc-index" aria-hidden="true">
+              <span class="is-active"></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="showcase-stage" id="showcaseStage">
+            <div class="sc-glow"></div>
+            <div class="sc-ring"></div>
+            <div class="sc-art" id="scArt">
+              <img class="sc-img is-current" id="scImgA" src="images/products/bl-004.png" alt="Black hardside spinner suitcase">
+              <img class="sc-img" id="scImgB" src="images/products/bl-004.png" alt="" aria-hidden="true">
+            </div>
+            <div class="sc-callout right" style="--x:50%; --y:7%"><i></i><span>Aluminium telescopic handle</span></div>
+            <div class="sc-callout right" style="--x:68%; --y:47%"><i></i><span>Scratch-resistant shell</span></div>
+            <div class="sc-callout left" style="--x:31%; --y:34%"><i></i><span>TSA-approved lock</span></div>
+            <div class="sc-callout left" style="--x:34%; --y:87%"><i></i><span>4 × 360° silent wheels</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. CATEGORIES ============ -->
+    <section class="section" id="categories" aria-labelledby="catTitle">
+      <div class="container-xl">
+        <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div class="reveal">
+            <span class="eyebrow">Shop by category</span>
+            <h2 class="section-title" id="catTitle">Something for every journey.</h2>
+          </div>
+          <a href="shop.html" class="link-arrow reveal">Shop all products <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 5. ZOOM-THROUGH VIDEO ============ -->
+    <section class="zoom" id="zoom" aria-label="Go further">
+      <div class="zoom-sticky">
+        <video class="zoom-video" id="zoomVideo" muted loop playsinline preload="metadata" poster="images/videos/hero-3-model-suitcase.jpg" aria-hidden="true">
+          <source src="images/videos/hero-3-model-suitcase.mp4" type="video/mp4">
+        </video>
+        <div class="zoom-mask" id="zoomMask" aria-hidden="true"><span>GO<br>FURTHER</span></div>
+        <div class="zoom-caption" id="zoomCaption">
+          <span class="eyebrow">The 2026 Campaign</span>
+          <h2>Wherever the road leads,<br><span class="serif">arrive in style.</span></h2>
+          <a href="shop.html" class="btn btn-bl-light magnetic">Discover the collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. SHOP THE LOOK ============ -->
+    <section class="section look" id="look" aria-labelledby="lookTitle">
+      <div class="container-xl">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <div class="look-photo reveal-scale reveal" id="lookPhoto">
+              <img src="images/hero/hero-1-airport-edit.jpg" alt="Model at the airport with a black spinner suitcase, a black leather tote and a travel wallet" loading="lazy">
+              <button type="button" class="hotspot" style="left:77%; top:75%" data-id="bl-004" aria-label="Suitcase: view product"><span></span></button>
+              <button type="button" class="hotspot" style="left:61.5%; top:64%" data-id="bl-013" aria-label="Handbag: view product"><span></span></button>
+              <button type="button" class="hotspot" style="left:63.5%; top:54%" data-id="bl-033" aria-label="Travel wallet: view product"><span></span></button>
+              <div class="hotspot-tip" id="hotspotTip" role="tooltip"></div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="reveal">
+              <span class="eyebrow">Shop the look</span>
+              <h2 class="section-title" id="lookTitle">The Airport Edit.</h2>
+              <p class="lead-text">Three pieces, one effortless departure. Tap a hotspot on the photo to explore each piece.</p>
+            </div>
+            <ul class="look-list reveal" id="lookList"></ul>
+            <div class="look-total reveal">
+              <span>Complete the look</span>
+              <strong id="lookTotal"></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. THE 2026 EDIT (vertical scroll → horizontal) ============ -->
+    <section class="edit" id="edit" aria-labelledby="editTitle">
+      <div class="edit-sticky" id="editSticky">
+        <div class="container-xl edit-head">
+          <div>
+            <span class="eyebrow">Featured</span>
+            <h2 class="section-title mb-0" id="editTitle">The 2026 Edit.</h2>
+          </div>
+          <div class="edit-meter" aria-hidden="true"><span id="editMeter"></span></div>
+        </div>
+        <div class="edit-track" id="editTrack"></div>
+      </div>
+    </section>
+
+    <!-- ============ 8. STATEMENT (words light up while scrolling) ============ -->
+    <section class="statement bg-dark-bl" aria-label="Our promise">
+      <div class="container-xl">
+        <p class="statement-text" id="statementText">Every journey tells a story. We make sure yours begins with luggage as remarkable as the places it will take you — authentic, beautifully made, and built to be handed down.</p>
+      </div>
+    </section>
+
+    <!-- ============ 9. MEN / WOMEN ============ -->
+    <section class="section" aria-label="Shop men and women">
+      <div class="container-xl">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <a href="men.html" class="split-tile split-men reveal">
+              <img class="split-photo" src="images/hero/hero-6-menswear-leather.jpg" alt="Man carrying a brown leather backpack" loading="lazy">
+              <div class="split-copy">
+                <span class="eyebrow">For Him</span>
+                <h2>Men’s Collection</h2>
+                <span class="link-arrow">Shop now <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="women.html" class="split-tile split-women reveal">
+              <img class="split-photo" src="images/hero/hero-2-effortless-arrivals.jpg" alt="Woman in a camel coat with a white suitcase" loading="lazy">
+              <div class="split-copy">
+                <span class="eyebrow">For Her</span>
+                <h2>Women’s Collection</h2>
+                <span class="link-arrow">Shop now <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. PROMISE + STATS ============ -->
+    <section class="section bg-soft" aria-labelledby="whyTitle">
+      <div class="container-xl">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Why Bronx Luggage</span>
+          <h2 class="section-title" id="whyTitle">Luxury you can trust.</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3"><div class="feature reveal"><i class="bi bi-patch-check"></i><h3>100% Authentic</h3><p>Sourced directly from each brand or its authorised distributors.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="feature reveal"><i class="bi bi-truck"></i><h3>Free Delivery</h3><p>Complimentary delivery on every order over PKR 50,000.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="feature reveal"><i class="bi bi-tools"></i><h3>Repair Desk</h3><p>In-store repairs for wheels, handles, zips and locks.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="feature reveal"><i class="bi bi-arrow-counterclockwise"></i><h3>30-Day Returns</h3><p>Changed your mind? Return unused items within 30 days.</p></div></div>
+        </div>
+        <div class="stats reveal">
+          <div><strong data-count="5">0</strong><span>Luxury brands</span></div>
+          <div><strong data-count="34">0</strong><span>Curated products</span></div>
+          <div><strong data-count="12">0</strong><span>Years of service</span></div>
+          <div><strong data-count="25000">0</strong><span>Happy travellers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. VISIT CTA ============ -->
+    <section class="section" aria-labelledby="visitTitle">
+      <div class="container-xl">
+        <div class="visit reveal-scale reveal">
+          <div class="visit-copy">
+            <span class="eyebrow">Visit the store</span>
+            <h2 class="section-title" id="visitTitle">See it. Feel it.<br>Take it home.</h2>
+            <p class="lead-text">Find us inside the Festival Marketplace, ground floor by the main atrium. Our travel specialists are ready to help.</p>
+            <div class="hero-cta">
+              <a href="contact.html" class="btn btn-bl-light magnetic">Get directions</a>
+              <a href="faq.html" class="btn btn-ghost-light magnetic">Read FAQs</a>
+            </div>
+          </div>
+          <div class="visit-art" aria-hidden="true">
+            <img data-art="suitcase" data-color="Silver" alt="" class="va-1">
+            <img data-art="backpack" data-color="Navy" alt="" class="va-2">
+            <img data-art="pouch" data-color="Tan" alt="" class="va-3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="ticker" class="ticker"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* =========================================================
+   Bronx Luggage — Contact page
+   ========================================================= */
+
+.contact-card { height: 100%; padding: 30px 26px; border-radius: var(--radius-lg); background: var(--bg-soft); transition: transform .5s var(--ease-out), box-shadow .5s var(--ease), background-color .4s; }
+.contact-card:hover { transform: translateY(-6px); background: #fff; box-shadow: var(--shadow); }
+.contact-card i { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--ink); color: #fff; font-size: 1.15rem; }
+.contact-card h2 { font-size: .74rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 22px 0 6px; }
+.contact-card a, .contact-card span { display: block; font-weight: 600; font-size: 1.02rem; word-break: break-word; }
+.contact-card p { font-size: .84rem; color: var(--muted); margin: 6px 0 0; }
+
+.dev-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; margin-top: 24px; padding: 22px 28px; border-radius: var(--radius-lg); border: 1px solid var(--line); }
+.dev-strip-title { display: flex; align-items: center; gap: 14px; }
+.dev-strip-title > i { font-size: 1.4rem; color: var(--accent); }
+.dev-strip-title small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.dev-strip ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0; padding: 0; font-size: .92rem; font-weight: 500; }
+.dev-strip li i { color: var(--muted); margin-right: 6px; }
+
+/* ---------- feedback ---------- */
+.feedback-form, .form-success { padding: clamp(26px, 4vw, 44px); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow-sm); }
+.feedback-form .form-label { font-size: .86rem; font-weight: 600; margin-bottom: 6px; }
+.feedback-form .opt { font-weight: 400; color: var(--muted); }
+.feedback-form .form-control,
+.feedback-form .form-select { border-radius: 14px; border-color: var(--line); padding: 12px 16px; background-color: var(--bg-soft); transition: all .25s var(--ease); }
+.feedback-form .form-control:focus,
+.feedback-form .form-select:focus { background-color: #fff; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.feedback-form .form-check-input:checked { background-color: var(--ink); border-color: var(--ink); }
+.feedback-form .form-check-label { font-size: .9rem; color: var(--ink-2); }
+.char-count { color: var(--muted); font-size: .78rem; margin-left: auto; padding-top: 4px; }
+.btn-lg-bl { padding: 14px 32px; font-size: 1rem; }
+
+.rating-input { display: flex; align-items: center; gap: 4px; }
+.rate-btn { border: 0; background: none; padding: 2px; font-size: 1.8rem; line-height: 1; color: #d2d2d7; transition: transform .2s var(--ease), color .2s var(--ease); }
+.rate-btn:hover { transform: scale(1.15); }
+.rate-btn.on { color: var(--gold); }
+.rate-label { margin-left: 10px; font-size: .9rem; color: var(--muted); font-weight: 500; }
+.rating-error { margin-top: 4px; font-size: .875em; color: var(--bs-form-invalid-color, #dc3545); }
+
+.form-success { text-align: center; padding-block: clamp(48px, 7vw, 80px); }
+.success-icon { width: 76px; height: 76px; margin: 0 auto 20px; border-radius: 50%; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; animation: successPop .7s var(--ease-out) both; }
+@keyframes successPop { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.form-success h3 { font-size: 1.8rem; font-weight: 700; letter-spacing: -.02em; }
+.form-success p { color: var(--muted); margin-bottom: 24px; }
+
+.recent { margin-top: 40px; }
+.recent-title { font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.feedback-list { display: flex; flex-direction: column; gap: 12px; }
+.feedback-empty { color: var(--muted); font-size: .92rem; }
+.feedback-empty i { color: var(--accent); margin-right: 6px; }
+.fb-item { padding: 18px 20px; border-radius: var(--radius); background: #fff; }
+.fb-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.fb-head strong { display: block; font-size: .95rem; }
+.fb-head small { color: var(--muted); font-size: .78rem; }
+.fb-head .stars { margin-left: auto; font-size: .78rem; white-space: nowrap; }
+.fb-avatar { width: 38px; height: 38px; flex: none; border-radius: 50%; background: var(--accent-soft); color: var(--accent-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.fb-item p { margin: 0; font-size: .92rem; color: var(--ink-2); word-break: break-word; }
+
+/* ---------- map ---------- */
+.map-wrap { border-radius: var(--radius-lg); overflow: hidden; height: clamp(300px, 40vw, 440px); background: var(--bg-soft); }
+.map-wrap iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.4) contrast(1.05); }

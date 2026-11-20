@@ -1,0 +1,9 @@
+/* =========================================================
+   Bronx Luggage — Men page theme
+   ========================================================= */
+
+body[data-page="men"] {
+  --col-bg: linear-gradient(160deg, #eeebe6 0%, #ddd5ca 100%);
+  --col-accent: #7a5230;
+  --col-banner: radial-gradient(120% 140% at 100% 0%, #3b2b1d 0%, #111 65%);
+}

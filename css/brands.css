@@ -1,0 +1,65 @@
+/* =========================================================
+   Bronx Luggage — Brands page
+   ========================================================= */
+
+.brand-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 20;
+  background: rgba(255, 255, 255, .86);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.brand-nav-inner { display: flex; justify-content: center; gap: 4px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
+.brand-nav-inner::-webkit-scrollbar { display: none; }
+.brand-nav-btn { flex: none; border: 0; background: none; padding: 10px 20px; border-radius: 999px; font-size: .95rem; opacity: .62; transition: opacity .3s var(--ease), background-color .3s var(--ease); }
+.brand-nav-btn:hover { opacity: 1; background: var(--bg-soft); }
+.brand-nav-btn.active { opacity: 1; background: var(--bg-soft); }
+.brand-nav-btn .brand-logo-img { height: 30px; }
+
+.brand-section { padding: clamp(72px, 10vw, 128px) 0; scroll-margin-top: calc(var(--header-h) + 60px); }
+.brand-section:nth-child(even) { background: var(--bg-soft); }
+.brand-section.flip .row > :first-child { order: 2; }
+
+.brand-logo { margin-bottom: 26px; }
+.brand-logo-mark { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+.brand-logo-img.brand-logo-mark { height: clamp(64px, 9vw, 108px); margin-left: -16px; }
+
+.brand-tagline { font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.15; margin: 0 0 16px; }
+.brand-story { color: var(--ink-2); font-size: 1.04rem; max-width: 560px; }
+
+.brand-facts { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 12px 36px; margin: 28px 0 22px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.brand-facts dt { font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.brand-facts dd { margin: 0; font-weight: 600; }
+
+.brand-signature { font-size: .92rem; color: var(--ink-2); margin-bottom: 4px; }
+.brand-signature i { color: var(--brand); margin-right: 4px; }
+.brand-cats { font-size: .88rem; color: var(--muted); margin-bottom: 24px; }
+
+.brand-visual {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(110% 90% at 50% 20%, #fff 0%, #ececef 100%);
+  background: radial-gradient(110% 90% at 50% 20%, #fff 0%, color-mix(in srgb, var(--brand) 14%, #f5f5f7) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.brand-section:nth-child(even) .brand-visual { background: radial-gradient(110% 90% at 50% 20%, #fff 0%, color-mix(in srgb, var(--brand) 16%, #ececef) 100%); }
+.brand-visual img { width: 78%; filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .16)); position: relative; z-index: 1; }
+.brand-year { position: absolute; bottom: 14px; right: 26px; font-size: clamp(4rem, 10vw, 8rem); font-weight: 800; letter-spacing: -.06em; color: rgba(0, 0, 0, .05); line-height: 1; }
+
+.brand-products { margin-top: clamp(48px, 6vw, 72px); }
+
+.brand-cta { text-align: center; padding: clamp(40px, 6vw, 72px) 24px; border-radius: var(--radius-lg); background: var(--bg-warm); }
+.brand-cta .lead-text { margin: 0 auto 24px; }
+
+@media (max-width: 991.98px) {
+  .brand-nav-inner { justify-content: flex-start; }
+  .brand-section.flip .row > :first-child { order: 0; }
+  .brand-facts { grid-template-columns: repeat(2, auto); }
+}

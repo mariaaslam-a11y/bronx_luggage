@@ -1,0 +1,9 @@
+/* =========================================================
+   Bronx Luggage — Women page theme
+   ========================================================= */
+
+body[data-page="women"] {
+  --col-bg: linear-gradient(160deg, #f8eef0 0%, #ecd6db 100%);
+  --col-accent: #a24d63;
+  --col-banner: radial-gradient(120% 140% at 100% 0%, #5a2a38 0%, #160c10 65%);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs — Bronx Luggage</title>
+  <meta name="description" content="Frequently asked questions about orders, shipping, returns, products and the Bronx Luggage store.">
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Jost:wght@300;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/faq.css" rel="stylesheet">
+</head>
+<body data-page="faq">
+  <div id="loader" class="loader"></div>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container-xl">
+        <ol class="breadcrumb-bl rise"><li><a href="index.html">Home</a></li><li aria-current="page">FAQs</li></ol>
+        <h1 class="display-title rise d1">Questions?<br><span class="serif">We’ve got answers.</span></h1>
+        <p class="lead-text rise d2">Everything you need to know about ordering, delivery, returns and our products.</p>
+        <div class="faq-search rise d3">
+          <i class="bi bi-search"></i>
+          <label for="faqSearch" class="visually-hidden">Search FAQs</label>
+          <input type="search" id="faqSearch" class="form-control" placeholder="Search questions, e.g. “returns”">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm pt-0">
+      <div class="container-xl">
+        <div class="faq-layout">
+          <div class="chip-row justify-content-center mb-4" id="faqCats" role="group" aria-label="FAQ categories"></div>
+          <div class="accordion faq-accordion" id="faqList"></div>
+          <p class="faq-empty" id="faqEmpty" hidden><i class="bi bi-emoji-neutral"></i> No questions match your search. Try another word or <a href="contact.html#feedback">ask us directly</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm pb-5">
+      <div class="container-xl">
+        <div class="faq-cta reveal">
+          <div>
+            <h2>Still have a question?</h2>
+            <p>Our travel specialists are happy to help — in store, by phone or by email.</p>
+          </div>
+          <a href="contact.html" class="btn btn-bl-light">Contact us <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <div id="ticker" class="ticker"></div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>
